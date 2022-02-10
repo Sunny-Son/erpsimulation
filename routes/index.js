@@ -169,7 +169,7 @@ router.post('/logistics', function(req, res, next) {
   
 /*  const { productname, customername, sunnyorderid, status } = req.body */
 
-  pool.query('INSERT INTO logistics (productname, customername, sunnyorderid, status) VALUES ($1, $2, $3, $4)', [productname, customername, sunnyorderid, status], (error, results) => {
+  pool.query('INSERT INTO logistics (productname, customername, sunnyorderid, status) VALUES ((select coalesce(max(id),0)+1 from logistics),$1, $2, $3, $4)', [productname, customername, sunnyorderid, status], (error, results) => {
     if (error) {
       throw error
     }
