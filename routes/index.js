@@ -140,7 +140,7 @@ router.post('/erporders', function(req, res, next) {
   const sunnyorderid = req.body.sunnyorderid;
   const status = req.body.status;
   
-  pool.query('INSERT INTO erporder (id, name, code, customer, ordernumber, sunnyorderid, status) VALUES (select max(id)+1 from erporder, $1, $2, $3, $4, $5, $6)', [name, code, customer, ordernumber, sunnyorderid, status], (error, results) => {
+  pool.query('INSERT INTO erporder (id, name, code, customer, ordernumber, sunnyorderid, status) VALUES ((select coalesce(max(id),0)+1 from erporder), $1, $2, $3, $4, $5, $6)', [name, code, customer, ordernumber, sunnyorderid, status], (error, results) => {
     if (error) {
       throw error
     }
