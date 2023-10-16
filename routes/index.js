@@ -9,11 +9,12 @@ var org = require('../lib/connection');
 var request = require('request');
 
 const Pool = require('pg').Pool
+
 const pool = new Pool({
-  user: 'xclxbjpavasdsw',
-  host: 'ec2-54-235-68-3.compute-1.amazonaws.com',
-  database: 'ddkpvh8aebt8ev',
-  password: 'aaa4ac7b07de3ea6013083cff4ec98b0a06c6a28175611f8861603e157986811',
+  user: 'noadhtdfaryduu',
+  host: 'ec2-35-169-9-79.compute-1.amazonaws.com',
+  database: 'd32tbfeen772ti',
+  password: '089ece019b26609ef9b1c84979a5b77bcef4398556539c5e26b1ee593ce1500b',
   port: 5432,
   ssl: {
     rejectUnauthorized: false
