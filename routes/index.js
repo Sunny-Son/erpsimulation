@@ -285,10 +285,10 @@ router.post('/:id', function(req, res, next) {
 });
 
 function converTable_ERPList(_url, obj) {
-  var _html_output = '<html><head><h3>Ildong Medicine Manufacture Factory System(ERP)</h3><title>ERP</title>';
+  var _html_output = '<html><head><h3>POSCO ERP System simulation</h3><title>ERP</title>';
 
   _html_output += '<style> table { width: 100%; border-top: 1px solid #444444; border-collapse: collapse; } th, td { border-bottom: 1px solid #444444; padding: 10px;} </style></head><p>';
-  _html_output += '<img src=ildong_a.jpg>';
+  _html_output += '<img src=posco_image.jpg>';
   _html_output += '<table><tr><td>ID</td><td>Product Name</td><td>Customer</td><td>Order Quantity</td><td>Order ID</td><td>Status</td><td>Start Delivery</td></tr>';
 //  obj = JSON.parse(json);
 
