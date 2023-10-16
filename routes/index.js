@@ -58,7 +58,8 @@ router.post('/', function(req, res, next) {
 router.get('/erporders', function(req, res, next) {
    pool.query('SELECT row_to_json(t) FROM (SELECT id, name, customer, ordernumber, sunnyorderid, status FROM erporder ORDER BY id DESC) t', (error, results) => {
     if (error) {
-      throw error
+      console.log('erporders error');
+      throw error;
     }
 /*    res.render('erporderlist', { records: results.records }); */
 /*    res.status(200).json(results.rows)   */
