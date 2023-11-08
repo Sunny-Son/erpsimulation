@@ -57,11 +57,11 @@ router.post('/', function(req, res, next) {
 /* Sunny Add... */
 router.get('/leadtosales', function(req, res, next) {
    
-  const billToCode = req.body.billToCode;
-  const startDate = req.body.startDate;
-  const endDate = req.body.endDate;
+  const billToCode = req.params.billToCode;
+  const startDate = req.params.startDate;
+  const endDate = req.params.endDate;
 
-  const returndata = '{"ReveResoluProductAmt":"333333","OrderProductGroupCode":"K","AppliedExchangeRateDate":"2022-01-05","CustomerPoNumber":"01S5395409","ConfirmStartDate":"2022-01-06 18:26:22.0","CurrencyCode":"USD","OrderBookingDate":"2022-01-06 18:28:09.0","CustomerNumber":"F6507","OrderQty":"111111","ReveResoluDiscountRate":"222222","XediFreightAmt":"444444","AppliedExchangeRate":"1194.3","OrderNumber":"01S5395409","ReveResoluOrderAmt":"555555","OrderProductNameCode":"FCE","ConfirmEndDate":"2022-01-10"},{"ReveResoluProductAmt":"333333","OrderProductGroupCode":"S","AppliedExchangeRateDate":"2022-01-05","CustomerPoNumber":"01S5395058","ConfirmStartDate":"2022-01-06 17:18:18.0","CurrencyCode":"KRW","OrderBookingDate":"2022-01-06 17:18:18.0","CustomerNumber":"YG566","OrderQty":"111111","ReveResoluDiscountRate":"222222","XediFreightAmt":"444444","AppliedExchangeRate":"1","OrderNumber":"01S5395058","ReveResoluOrderAmt":"555555","OrderProductNameCode":"FPJ","ConfirmEndDate":"2022-01-10"}';
+  const returndata = '[{"ReveResoluProductAmt":"333333","OrderProductGroupCode":"K","AppliedExchangeRateDate":"2022-01-05","CustomerPoNumber":"01S5395409","ConfirmStartDate":"2022-01-06 18:26:22.0","CurrencyCode":"USD","OrderBookingDate":"2022-01-06 18:28:09.0","CustomerNumber":"F6507","OrderQty":"111111","ReveResoluDiscountRate":"222222","XediFreightAmt":"444444","AppliedExchangeRate":"1194.3","OrderNumber":"01S5395409","ReveResoluOrderAmt":"555555","OrderProductNameCode":"FCE","ConfirmEndDate":"2022-01-10"},{"ReveResoluProductAmt":"333333","OrderProductGroupCode":"S","AppliedExchangeRateDate":"2022-01-05","CustomerPoNumber":"01S5395058","ConfirmStartDate":"2022-01-06 17:18:18.0","CurrencyCode":"KRW","OrderBookingDate":"2022-01-06 17:18:18.0","CustomerNumber":"YG566","OrderQty":"111111","ReveResoluDiscountRate":"222222","XediFreightAmt":"444444","AppliedExchangeRate":"1","OrderNumber":"01S5395058","ReveResoluOrderAmt":"555555","OrderProductNameCode":"FPJ","ConfirmEndDate":"2022-01-10"}]';
   console.log('billToCode = [' + billToCode + ']');
   console.log('startDate = [' + startDate + ']');
   console.log('endDate = [' + endDate + ']');
